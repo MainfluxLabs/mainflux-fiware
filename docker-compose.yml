@@ -1,10 +1,26 @@
-# Note that mongo container is started before Orion, as Orion needs it
+###
+# Copyright (c) Mainflux
+#
+# Mainflux server is licensed under an Apache license, version 2.0 license.
+# All rights not explicitly granted in the Apache license, version 2.0 are reserved.
+# See the included LICENSE file for more details.
+###
+
+
+# N.B. Orion-MongoDB container is started before Orion, as Orion needs it
 # as dependency and reserve the order has been found problematic in some
 # low resource hosts
+
+###
+# Orion-MongoDB
+###
 mongo:
   image: mongo:2.6
   command: --smallfiles --nojournal
 
+###
+# Orion Context Broker
+###
 orion:
   image: fiware/orion
   links:
@@ -13,14 +29,24 @@ orion:
     - "1026:1026"
   command: -dbhost mongo -logLevel DEBUG
 
+###
+# Mosquitto MQTT Broker
+###
+mosquitto:
+  image: ansi/mosquitto
+  ports:
+    - "1883:1883"
+
+###
+# IoT Agent - MQTT
+###
 iota-mqtt:
-    image: mainflux/iota-mqtt
-    hostname: mainflux
-    links:
-        - orion
-    expose:
-        - "8080"
-        - "8081"
+  image: fiware/iota-mqtt
+  links:
+    - orion
+    - mosquitto
+  ports:
+    - "4041:4041" 
 
       
 
