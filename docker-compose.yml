@@ -22,7 +22,7 @@ mongo:
 # Orion Context Broker
 ###
 orion:
-  image: fiware/orion
+    image: mainflux/fiware-orion
   links:
     - mongo
   ports:
@@ -41,12 +41,21 @@ mosquitto:
 # IoT Agent - MQTT
 ###
 iota-mqtt:
-  image: fiware/iota-mqtt
+  image: mainflux/fiware-iota-mqtt
   links:
     - orion
     - mosquitto
   ports:
     - "4041:4041" 
 
+###
+# IoT Agent - LWM2M
+###
+iota-mqtt:
+  image: mainflux/fiware-iota-mqtt
+  links:
+    - orion
+  ports:
+    - "4042:4042"
       
 
