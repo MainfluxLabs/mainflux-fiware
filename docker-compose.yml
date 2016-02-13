@@ -22,7 +22,7 @@ mongo:
 # Orion Context Broker
 ###
 orion:
-    image: mainflux/fiware-orion
+  image: mainflux/fiware-orion
   links:
     - mongo
   ports:
