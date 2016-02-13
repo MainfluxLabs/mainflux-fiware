@@ -51,8 +51,8 @@ iota-mqtt:
 ###
 # IoT Agent - LWM2M
 ###
-iota-mqtt:
-  image: mainflux/fiware-iota-mqtt
+iota-lwm2m:
+  image: mainflux/fiware-iota-lwm2m
   links:
     - orion
   ports:
