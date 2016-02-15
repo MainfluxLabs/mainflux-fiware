@@ -7,12 +7,6 @@ Mainflux IoT Cloud Platform based on [Fiware](https://www.fiware.org/)
 
 It allows device, user and application connections over various network protocols, like HTTP, MQTT, WebSocket and CoAP, making a seamless bridge between them. As a consequence, Mainflux represents highly secure and highly optimised M2M platform based on the cutting-edge standards and approaches in the industry.
 
-### System Architecture
-Mainflux is used to inter-connect davices and applications in a typical IoT system architecture:
-![Cloud Architecture](https://github.com/Mainflux/mainflux-doc/blob/master/img/cloudArchitecture.jpg)
-
-It has however some additional roles in the system - like device management, data history storage (time series and Big Data) and various types of event processing and analytics. See [Features](https://github.com/Mainflux/mainflux#features) chapter below.
-
 ### Features
 An extensive (and incomplete) list of featureas includes:
 - Responsive and scalable architecture based on a set of [Microservices](https://en.wikipedia.org/wiki/Microservices)
@@ -27,6 +21,29 @@ An extensive (and incomplete) list of featureas includes:
 - Clear project roadmap, extensive development ecosystem and highly skilled developer community
 - Professional support via [Mainflux](http://mainflux.com) company
 - And many more
+
+### System Architecture
+Mainflux IoT cloud is composed of several Fiware components, so called [Generic Enablers](http://catalogue.fiware.org/enablers?page=1)"
+- [Orion Context Broker](http://catalogue.fiware.org/enablers/publishsubscribe-context-broker-orion-context-broker)
+- [IoT Agent MQTT](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
+- [IoT Agent LWM2M](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
+- [Wilma PEP Proxy](http://catalogue.fiware.org/enablers/pep-proxy-wilma)
+- [Keyrock Identity Manager](http://catalogue.fiware.org/enablers/identity-management-keyrock)
+
+These components are packaged and deployed in a set of Docker containers maintained by Mainflux team, with images uploaded to [Mainflux Docker Hub page](https://hub.docker.com/u/mainflux/).
+
+Docker composition is that constitues Mainflux IoT infrastructure is defined in the [`docker-compose.yml`](https://github.com/Mainflux/mainflux-fiware/blob/master/docker-compose.yml).
+
+### Deployment
+Deployment of Mainflux IoT Cloud is super-easy:
+- Get the [`docker-compose.yml`](https://github.com/Mainflux/mainflux-fiware/blob/master/docker-compose.yml)
+- Start the composition:
+```
+docker-compose up
+```
+This will automatically download Docker images from [Mainflux Docker Hub](https://hub.docker.com/u/mainflux/) and deploy the composition.
+
+If you need these Docker images, you will have to look at appropriate repos in the [Mainflux project GitHub](https://github.com/Mainflux) - look for the repos starting with prefix `fiware-`.
 
 ### Documentation
 Development documentation can be found on [mainflux-fiware wiki](https://github.com/Mainflux/mainflux-fiware/wiki)
