@@ -24,6 +24,11 @@ An extensive (and incomplete) list of featureas includes:
 
 ### System Architecture
 Mainflux IoT cloud is composed of several Fiware components, so called [Generic Enablers](http://catalogue.fiware.org/enablers?page=1):
+- [Orion Context Broker](http://catalogue.fiware.org/enablers/publishsubscribe-context-broker-orion-context-broker)
+- [IoT Agent MQTT](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
+- [IoT Agent LWM2M](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
+- [Wilma PEP Proxy](http://catalogue.fiware.org/enablers/pep-proxy-wilma)
+- [Keyrock Identity Manager](http://catalogue.fiware.org/enablers/identity-management-keyrock)
 
 The following matrix describes the functionality of each GE in the system and gives the location of the code repositories:
 
