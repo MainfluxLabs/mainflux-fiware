@@ -43,7 +43,7 @@ docker-compose up
 ```
 This will automatically download Docker images from [Mainflux Docker Hub](https://hub.docker.com/u/mainflux/) and deploy the composition.
 
-If you need these Docker images, you will have to look at appropriate repos in the [Mainflux project GitHub](https://github.com/Mainflux) - look for the repos starting with prefix `fiware-`.
+If you need to modify these Docker images, you will have to look at appropriate repos in the [Mainflux project GitHub](https://github.com/Mainflux) - look for the repos starting with prefix `fiware-`.
 
 ### Documentation
 Development documentation can be found on [mainflux-fiware wiki](https://github.com/Mainflux/mainflux-fiware/wiki)
