@@ -15,7 +15,7 @@ An extensive (and incomplete) list of featureas includes:
 - Device management and provisioning and OTA FW updates
 - Highly secured connections via TLS and DTLS
 - Standardized [NGSI](http://technical.openmobilealliance.org/Technical/technical-information/release-program/current-releases/ngsi-v1-0) inter-connection between SW components
-- Enhanced and fine-grained security via PEP Reverse Proxy, [OAuth 2.0](http://oauth.net/2/) [identity management](https://en.wikipedia.org/wiki/Identity_management) and [XACML 3.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml) based Authorization Server.
+- Enhanced and fine-grained security via [PEP](http://forge.fiware.org/plugins/mediawiki/wiki/fiware/index.php/FIWARE.OpenSpecification.Security.PEP_Proxy_Generic_Enabler) [Reverse Proxy](https://en.wikipedia.org/wiki/Reverse_proxy), [OAuth 2.0](http://oauth.net/2/) [identity management](https://en.wikipedia.org/wiki/Identity_management) and [XACML 3.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml) based Authorization Server.
 - [LwM2M](http://goo.gl/rHjLZQ) standard compliance
 - [oneM2M](http://www.onem2m.org/) adapter
 - Easy deployment and high system scalability via [Docker](https://www.docker.com/) images
