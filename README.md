@@ -23,7 +23,7 @@ An extensive (and incomplete) list of featureas includes:
 - And many more
 
 ### System Architecture
-Mainflux IoT cloud is composed of several Fiware components, so called [Generic Enablers](http://catalogue.fiware.org/enablers?page=1)"
+Mainflux IoT cloud is composed of several Fiware components, so called [Generic Enablers](http://catalogue.fiware.org/enablers?page=1):
 - [Orion Context Broker](http://catalogue.fiware.org/enablers/publishsubscribe-context-broker-orion-context-broker)
 - [IoT Agent MQTT](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
 - [IoT Agent LWM2M](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
@@ -32,7 +32,7 @@ Mainflux IoT cloud is composed of several Fiware components, so called [Generic 
 
 These components are packaged and deployed in a set of Docker containers maintained by Mainflux team, with images uploaded to [Mainflux Docker Hub page](https://hub.docker.com/u/mainflux/).
 
-Docker composition is that constitues Mainflux IoT infrastructure is defined in the [`docker-compose.yml`](https://github.com/Mainflux/mainflux-fiware/blob/master/docker-compose.yml).
+Docker composition that constitues Mainflux IoT infrastructure is defined in the [`docker-compose.yml`](https://github.com/Mainflux/mainflux-fiware/blob/master/docker-compose.yml).
 
 ### Deployment
 Deployment of Mainflux IoT Cloud is super-easy:
