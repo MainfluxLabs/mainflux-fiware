@@ -14,7 +14,8 @@ An extensive (and incomplete) list of featureas includes:
 - Set of client libraries for many HW platforms in several programming languages: C/C++, JavaScript, Go and Python
 - Device management and provisioning and OTA FW updates
 - Highly secured connections via TLS and DTLS
-- Enhanced and fine-grained security via [OAuth 2.0](http://oauth.net/2/) proxy and [identity management](https://en.wikipedia.org/wiki/Identity_management) 
+- Standardized [NGSI](http://technical.openmobilealliance.org/Technical/technical-information/release-program/current-releases/ngsi-v1-0) inter-connection between SW components
+- Enhanced and fine-grained security via PEP Reverse Proxy, [OAuth 2.0](http://oauth.net/2/) [identity management](https://en.wikipedia.org/wiki/Identity_management) and [XACML 3.0](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xacml) based Authorization Server.
 - [LwM2M](http://goo.gl/rHjLZQ) standard compliance
 - [oneM2M](http://www.onem2m.org/) adapter
 - Easy deployment and high system scalability via [Docker](https://www.docker.com/) images
