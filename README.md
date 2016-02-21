@@ -24,7 +24,7 @@ An extensive (and incomplete) list of featureas includes:
 - [oneM2M](http://www.onem2m.org/) adapter
 - Easy deployment and high system scalability via [Docker](https://www.docker.com/) images
 - Clear project roadmap, extensive development ecosystem and highly skilled developer community
-- Professional support via [Mainflux](http://mainflux.com) company
+- Professional support via [Mainflux company](http://mainflux.com)
 - And many more
 
 ### System Architecture
