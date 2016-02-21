@@ -38,7 +38,7 @@ Mainflux IoT cloud is composed of several [Fiware](https://www.fiware.org/) comp
 The following matrix describes the functionality of each GE in the system and gives the location of the code repositories:
 
 | GE               | Function               |  Mainflux repo | Fiware Catalogue |
-| ---------------- |:----------------------:| :-------------:| ---------------: |
+| :--------------- |:-----------------------| :--------------| :--------------- |
 | Orion            | Pub/Sub Context Broker | [fiware-orion](https://github.com/Mainflux/fiware-orion) | [Orion GE](http://catalogue.fiware.org/enablers/publishsubscribe-context-broker-orion-context-broker)|
 | IoT Agent MQTT   | MQTT Agent             | [fiware-iota-mqtt](https://github.com/Mainflux/fiware-iota-mqtt) | [IDAS (MQTT) GE](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)|
 | IoT Agent LWM2M  | LWM2M Agent            | [fiware-iota-lwm2m](https://github.com/Mainflux/fiware-iota-lwm2m) | [IDAS (LWM2M) GE](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)|
