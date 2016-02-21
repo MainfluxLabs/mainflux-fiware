@@ -16,6 +16,7 @@
 ###
 mongo:
   image: mongo:3.2
+  container_name: mainflux-fiware-orion-mongodb
   command: --smallfiles --nojournal
 
 ###
@@ -23,6 +24,7 @@ mongo:
 ###
 orion:
   image: mainflux/fiware-orion
+  container_name: mainflux-fiware-orion
   links:
     - mongo
   ports:
@@ -34,6 +36,7 @@ orion:
 ###
 mosquitto:
   image: ansi/mosquitto
+  container_name: mainflux-mosquitto
   ports:
     - "1883:1883"
 
@@ -42,6 +45,7 @@ mosquitto:
 ###
 iota-mqtt:
   image: mainflux/fiware-iota-mqtt
+  container_name: mainflux-fiware-iota-mqtt
   links:
     - orion
     - mosquitto
@@ -53,6 +57,7 @@ iota-mqtt:
 ###
 iota-lwm2m:
   image: mainflux/fiware-iota-lwm2m
+  container_name: mainflux-fiware-iota-lwm2m
   links:
     - orion
   ports:
