@@ -1,11 +1,15 @@
-# Mainflux Fiware
+# Mainflux
 
 [![License](https://img.shields.io/badge/license-Apache%20v2.0-blue.svg)](LICENSE) [![Join the chat at https://gitter.im/Mainflux/mainflux](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Mainflux/mainflux?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ### About
-Mainflux IoT Cloud Platform based on [Fiware](https://www.fiware.org/)
+Mainflux is an open source and patent-free IoT Cloud Platform.
 
-It allows device, user and application connections over various network protocols, like HTTP, MQTT, WebSocket and CoAP, making a seamless bridge between them. As a consequence, Mainflux represents highly secure and highly optimised M2M platform based on the cutting-edge standards and approaches in the industry.
+It allows device, user and application connections over various network protocols, like HTTP, MQTT, WebSocket and CoAP, making a seamless bridge between them. It is used as the IoT middleware for building complex IoT solutions.
+
+![Cloud Architecture](https://github.com/Mainflux/mainflux-doc/blob/master/img/cloudArchitecture.jpg)
+
+Mainflux is built with <3 by Mainflux team and community contributors, and is backed-up by [Mainflux company](http://mainflux.com/) which offers professional support and services in the domain of IoT.
 
 ### Features
 An extensive (and incomplete) list of featureas includes:
