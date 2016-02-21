@@ -79,6 +79,5 @@ Swagger-generated API reference can be foud at [http://mainflux.com/apidoc](http
 [@mainflux](https://twitter.com/mainflux)
 
 ### License
-#### mainflux-fiware
 - Mainflux contributions: [Apache License, version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 - Fiware components: [GNU Affero GPL](http://www.gnu.org/licenses/why-affero-gpl.en.html)
