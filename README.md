@@ -28,7 +28,7 @@ An extensive (and incomplete) list of featureas includes:
 - And many more
 
 ### System Architecture
-Mainflux IoT cloud is composed of several Fiware components, so called [Generic Enablers](http://catalogue.fiware.org/enablers?page=1):
+Mainflux IoT cloud is composed of several [Fiware](https://www.fiware.org/) components, so called [Generic Enablers](http://catalogue.fiware.org/enablers?page=1):
 - [Orion Context Broker](http://catalogue.fiware.org/enablers/publishsubscribe-context-broker-orion-context-broker)
 - [IoT Agent MQTT](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
 - [IoT Agent LWM2M](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)
