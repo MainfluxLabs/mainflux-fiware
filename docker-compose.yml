@@ -37,6 +37,8 @@ orion:
 mosquitto:
   image: ansi/mosquitto
   container_name: mainflux-mosquitto
+  volumes:
+    - ./config/mosquitto:/etc/mosquitto
   ports:
     - "1883:1883"
 
@@ -46,6 +48,8 @@ mosquitto:
 iota-mqtt:
   image: mainflux/fiware-iota-mqtt
   container_name: mainflux-fiware-iota-mqtt
+  volumes:
+    - ./config/iota-mqtt/config.js:/opt/iota-mqtt/config-mainflux.js
   links:
     - orion
     - mosquitto
@@ -58,6 +62,8 @@ iota-mqtt:
 iota-lwm2m:
   image: mainflux/fiware-iota-lwm2m
   container_name: mainflux-fiware-iota-lwm2m
+  volumes:
+    - ./config/iota-mqtt/config.js:/opt/iota-lwm2m/config-mainflux.js
   links:
     - orion
   ports:
