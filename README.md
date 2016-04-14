@@ -33,7 +33,7 @@ Mainflux IoT cloud is composed of several [Fiware](https://www.fiware.org/) comp
 - IoT Agent MQTT
 - IoT Agent LWM2M
 - Wilma PEP Proxy
-- Keyrock Identity Manager
+- Kestone Identity Manager
 
 The following matrix describes the functionality of each GE in the system and gives the location of the code repositories:
 
@@ -42,9 +42,8 @@ The following matrix describes the functionality of each GE in the system and gi
 | Orion            | Pub/Sub Context Broker | [fiware-orion](https://github.com/Mainflux/fiware-orion) | [Orion GE](http://catalogue.fiware.org/enablers/publishsubscribe-context-broker-orion-context-broker)|
 | IoT Agent MQTT   | MQTT Agent             | [fiware-iota-mqtt](https://github.com/Mainflux/fiware-iota-mqtt) | [IDAS (MQTT) GE](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)|
 | IoT Agent LWM2M  | LWM2M Agent            | [fiware-iota-lwm2m](https://github.com/Mainflux/fiware-iota-lwm2m) | [IDAS (LWM2M) GE](http://catalogue.fiware.org/enablers/backend-device-management-idas/creating-instances)|
-| Wilma PEP Proxy  | OAuth 2.0 Reverse Proxy          | - | [Wilma GE](http://catalogue.fiware.org/enablers/pep-proxy-wilma)|
-| Keyrock          | Identity Manager          | - | [Keyrock GE](http://catalogue.fiware.org/enablers/identity-management-keyrock)|
-
+| Wilma PEP Proxy  | OAuth 2.0 Reverse Proxy          | [fiware-pep-proxy](https://github.com/Mainflux/fiware-pep-proxy) | [Wilma GE](http://catalogue.fiware.org/enablers/pep-proxy-wilma)|
+| Keystone         | Identity Manager          | [fiware-keystone](https://github.com/Mainflux/fiware-keystone)| [Keyrock GE](http://catalogue.fiware.org/enablers/identity-management-keyrock)|
 
 
 These components are packaged and deployed in a set of Docker containers maintained by Mainflux team, with images uploaded to [Mainflux Docker Hub page](https://hub.docker.com/u/mainflux/).
@@ -64,8 +63,6 @@ If you need to modify these Docker images, you will have to look at appropriate 
 
 ### Documentation
 Development documentation can be found on [Mainflux wiki](https://github.com/Mainflux/mainflux-fiware/wiki)
-
-Swagger-generated API reference can be foud at [http://mainflux.com/apidoc](http://mainflux.com/apidoc).
 
 ### Community
 #### Mailing lists
