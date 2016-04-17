@@ -11,6 +11,9 @@
 # as dependency and reserve the order has been found problematic in some
 # low resource hosts
 
+
+########## ORION CONTEXT BROKER ##########
+
 ###
 # Orion-MongoDB
 ###
@@ -23,13 +26,66 @@ mongo:
 # Orion Context Broker
 ###
 orion:
-  image: mainflux/fiware-orion
+  image: fiware/orion:1.0
   container_name: mainflux-fiware-orion
   links:
     - mongo
   ports:
     - "1026:1026"
   command: -dbhost mongo -logLevel DEBUG
+
+
+########## SECURITY ##########
+
+###
+# AuthZForce
+###
+authzforce:
+  image: fiware/authzforce-ce-server:release-4.4.1b
+  container_name: mainflux-fiware-authzforce
+  hostname: authzforce
+  expose:
+    - "8080"
+
+###
+# IDM
+###
+idm:
+  image: fiware/idm:latest
+  container_name: mainflux-fiware-idm
+  hostname: idm
+  links:
+    - authzforce
+  volumes:
+      - ./config/idm/keystone:/keystone/etc
+  expose:
+    - "5000"
+  environment:
+    - APP_NAME=mainflux
+    - AUTHZFORCE_VERSION=4.4.1b
+
+###
+# PEP Proxy - Wilma
+###
+pep-proxy:
+  image: fiware/pep-proxy:latest
+  container_name: mainflux-fiware-pep-proxy
+  hostname: wilma
+  links:
+    - orion
+    - idm
+    - authzforce
+  volumes:
+    - ./config/pep-proxy/config.js:/opt/fiware-pep-proxy/config.js
+  expose:
+    - "1026"
+  environment:
+    - APP_HOSTNAME=orion
+    - APP_PORT=1026
+    - AUTHZFORCE_VERSION=4.4.1b
+
+
+########## IOT AGENTS ##########
 
 ###
 # Mosquitto MQTT Broker
@@ -60,10 +116,10 @@ iota-mqtt:
 # IoT Agent - LWM2M
 ###
 iota-lwm2m:
-  image: mainflux/fiware-iota-lwm2m
+  image: fiware/lightweightm2m-iotagent:latest
   container_name: mainflux-fiware-iota-lwm2m
   volumes:
-    - ./config/iota-mqtt/config.js:/opt/iota-lwm2m/config-mainflux.js
+    - ./config/iota-mqtt/config-blank.js:/opt/iota-lwm2m/config-mainflux.js
   links:
     - orion
   ports:
