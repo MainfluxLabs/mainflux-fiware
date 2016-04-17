@@ -33,7 +33,8 @@ Mainflux IoT cloud is composed of several [Fiware](https://www.fiware.org/) comp
 - IoT Agent MQTT
 - IoT Agent LWM2M
 - Wilma PEP Proxy
-- Kestone Identity Manager
+- Keyrock Identity Manager
+- AuthZForce Authorization Server
 
 The following matrix describes the functionality of each GE in the system and gives the location of the code repositories:
 
