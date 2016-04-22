@@ -9,7 +9,7 @@ It allows device, user and application connections over various network protocol
 
 ![Cloud Architecture](https://github.com/Mainflux/mainflux-doc/blob/master/img/cloudArchitecture.jpg)
 
-Mainflux is built with <3 by Mainflux team and community contributors, and is backed-up by [Mainflux company](http://mainflux.com/) which offers professional support and services in the domain of IoT.
+Mainflux is built with <3 by Mainflux team and community contributors.
 
 ### Features
 An extensive (and incomplete) list of featureas includes:
@@ -24,7 +24,6 @@ An extensive (and incomplete) list of featureas includes:
 - [oneM2M](http://www.onem2m.org/) adapter
 - Easy deployment and high system scalability via [Docker](https://www.docker.com/) images
 - Clear project roadmap, extensive development ecosystem and highly skilled developer community
-- Professional support via [Mainflux company](http://mainflux.com)
 - And many more
 
 ### System Architecture
