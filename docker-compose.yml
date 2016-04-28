@@ -85,6 +85,21 @@ pep-proxy:
     - AUTHZFORCE_VERSION=4.4.1b
 
 
+########## OTHER ##########
+###
+# STH
+###
+sth-comet:
+  image: telefonicaid/IoT-STH:latest
+  container_name: mainflux-fiware-sth
+  volumes:
+    - ./config/sth/config.js:/github/telefonicaid/IoT-STH/config.js
+  links:
+    - orion
+  ports:
+    - "8666:8666"
+
+
 ########## IOT AGENTS ##########
 
 ###
@@ -119,7 +134,7 @@ iota-lwm2m:
   image: fiware/lightweightm2m-iotagent:latest
   container_name: mainflux-fiware-iota-lwm2m
   volumes:
-    - ./config/iota-mqtt/config-blank.js:/opt/iota-lwm2m/config-mainflux.js
+    - ./config/iota-mqtt/config-blank.js:/opt/iota-lwm2m/config.js
   links:
     - orion
   ports:
