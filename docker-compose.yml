@@ -1,7 +1,7 @@
 ###
 # Copyright (c) Mainflux
 #
-# Mainflux server is licensed under an Apache license, version 2.0 license.
+# Mainflux IoT Platform is licensed under an Apache license, version 2.0 license.
 # All rights not explicitly granted in the Apache license, version 2.0 are reserved.
 # See the included LICENSE file for more details.
 ###
@@ -12,7 +12,7 @@
 # low resource hosts
 
 
-########## ORION CONTEXT BROKER ##########
+# === ORION CONTEXT BROKER ===
 
 ###
 # Orion-MongoDB
@@ -35,7 +35,7 @@ orion:
   command: -dbhost mongo -logLevel DEBUG
 
 
-########## SECURITY ##########
+# === SECURITY ===
 
 ###
 # AuthZForce
@@ -85,7 +85,8 @@ pep-proxy:
     - AUTHZFORCE_VERSION=4.4.1b
 
 
-########## OTHER ##########
+# === OTHER ===
+
 ###
 # STH
 ###
@@ -100,7 +101,7 @@ sth-comet:
     - "8666:8666"
 
 
-########## IOT AGENTS ##########
+# === IOT AGENTS ===
 
 ###
 # Mosquitto MQTT Broker
@@ -117,10 +118,10 @@ mosquitto:
 # IoT Agent - MQTT
 ###
 iota-mqtt:
-  image: mainflux/fiware-iota-mqtt
+  image: fiware/iotagent-mqtt
   container_name: mainflux-fiware-iota-mqtt
   volumes:
-    - ./config/iota-mqtt/config.js:/opt/iota-mqtt/config-mainflux.js
+    - ./config/iota-mqtt/config.js:/opt/iota-mqtt/config.js
   links:
     - orion
     - mosquitto
